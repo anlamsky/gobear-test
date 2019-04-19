@@ -1,0 +1,14 @@
+gobear_jobs.default_controller_getListJobs_77:
+  path: '/jobs'
+  defaults:
+    _controller: '\Drupal\gobear_jobs\Controller\DefaultController::getListJobs'
+    _title: 'Jobs'
+  requirements:
+    _permission: 'access content'
+gobear_jobs.default_controller_hello:
+  path: '/gobear_jobs/hello/{name}'
+  defaults:
+    _controller: '\Drupal\gobear_jobs\Controller\DefaultController::hello'
+    _title: 'list jobs'
+  requirements:
+    _permission: 'access content'

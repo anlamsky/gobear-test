@@ -1,0 +1,27 @@
+<!-- Add you custom twig html here -->
+<div class="container py-3 mt-3">
+{% for item in content %}
+  <div class="row">
+    <div  class="col-xs-12" style="border: solid 1px #CCC; padding: 10px; margin-bottom: 15px;">
+        <div class="col-md-8">
+            <h4>{{item['title']}}</h4> 
+            <p><span class="text-primary font-weight-bold">@ {{item['company']}}</span> | <span>{{item['location']}}</span></p> 
+            <p>Published {{item['created_at']}}</p>
+            <p>
+                <a data-toggle="collapse" href="#collapseExample-{{item['id']}}" role="button" aria-expanded="false" aria-controls="collapseExample-{{item['id']}}">
+                    More info >
+                </a>
+                <div class="collapse" id="collapseExample-{{item['id']}}">
+                    <div class="card card-body">
+                        {{item['description']|raw}}
+                    </div>
+                </div
+            </p>
+        </div>
+        <div class="col-md-4 align-middle">
+        <a href="#" class="btn btn-primary btn-lg active btn-success pull-right" role="button" aria-pressed="true">{{item['type']}}</a>
+        </div>
+    </div>
+  </div>
+  {% endfor%}
+</div>
